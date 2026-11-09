@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINKBYPASS PRO — Trình xử lý liên kết</title>
+<style>
+:root{--bg:#080a18;--panel:#11152b;--line:#38306c;--purple:#8b35ff;--pink:#c34dff;--muted:#a8a6c8;--green:#54e69a}
+*{box-sizing:border-box}body{margin:0;color:#f7f5ff;background:radial-gradient(ellipse at 50% -20%,#33206b 0,transparent 48%),var(--bg);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{border-bottom:1px solid #29234f;background:#090b1bd9}.nav{max-width:1120px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:22px;font-weight:900;letter-spacing:.4px}.brand span{color:#bd62ff}.tag{color:var(--muted);font-size:13px}.navlinks{display:flex;gap:22px;color:#d5cafa;font-size:14px}
+main{max-width:1000px;margin:64px auto;padding:0 20px}.hero{text-align:center;margin-bottom:30px}.eyebrow{color:#c78cff;font-weight:700;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.08;margin:12px 0;background:linear-gradient(90deg,#fff,#c28bff 65%,#8c6bff);color:transparent;background-clip:text}.hero p{color:var(--muted);max-width:680px;margin:0 auto}
+.panel{border:1px solid #6e39d9;background:linear-gradient(145deg,#17172fef,#0e1226f5);border-radius:22px;padding:26px;box-shadow:0 18px 70px #5a22bd26}
+.section-title{font-size:17px;font-weight:750;margin:0 0 13px}.services{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:25px}.service{border:1px solid #4b3b80;color:#e6dcff;background:#15172e;border-radius:999px;padding:10px 16px;cursor:pointer;font:inherit;transition:.2s}.service:hover,.service.active{background:linear-gradient(100deg,#852cff,#5424d9);border-color:#b77aff;box-shadow:0 5px 20px #8b35ff38}
+label{display:block;font-weight:700;margin:0 0 9px}.urlbox{display:flex;gap:8px}.urlbox input{min-width:0;flex:1;background:#090d20;border:1px solid #62549a;border-radius:12px;color:white;padding:16px;font:inherit;outline:none}.urlbox input:focus{border-color:#c17aff;box-shadow:0 0 0 3px #9a4aff25}.clear{border:1px solid #4b3b80;border-radius:12px;background:#17172e;color:#ddd;padding:0 15px;cursor:pointer}.submit{margin-top:14px;width:100%;border:0;border-radius:12px;padding:16px;background:linear-gradient(100deg,#c14cff,#7b28f4 60%,#4e2bea);color:white;font-weight:850;font-size:17px;cursor:pointer;box-shadow:0 8px 25px #792cff44}.submit:hover{filter:brightness(1.12)}.result{margin-top:16px;border:1px solid #284b52;background:#0b1b25;border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--green)}.result small{display:block;color:#a7c9c4}.copy{background:#21143a;color:#e5caff;border:1px solid #7543b4;border-radius:9px;padding:9px 14px;cursor:pointer}.notice{margin-top:15px;color:#b9b5d1;font-size:12px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.feature{padding:18px;border:1px solid #27264c;border-radius:14px;background:#101329;text-align:center}.feature b{display:block;margin-bottom:4px}.feature span{color:var(--muted);font-size:13px}footer{text-align:center;color:#8985ad;padding:30px 12px;font-size:13px}
+@media(max-width:650px){.navlinks{display:none}main{margin:38px auto}.panel{padding:18px}.features{grid-template-columns:1fr}.hero h1{font-size:38px}.urlbox{flex-wrap:wrap}.urlbox input{flex-basis:100%}.clear{padding:10px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div><div class="brand">🔗 LINKBYPASS <span>PRO</span></div><div class="tag">Trình xử lý liên kết · Giao diện tiếng Việt</div></div><nav class="navlinks"><span>Trang chủ</span><span>Dịch vụ</span><span>Hướng dẫn</span><span>Trợ giúp</span></nav></div></header>
+<main>
+<section class="hero"><div class="eyebrow">NHANH · RÕ RÀNG · DỄ SỬ DỤNG</div><h1>Xử lý liên kết<br>chỉ với vài thao tác</h1><p>Chọn loại liên kết, dán URL và gửi yêu cầu. Bản mẫu này hiện tập trung vào giao diện; chưa kết nối bộ xử lý của bên thứ ba.</p></section>
+<section class="panel">
+<h2 class="section-title">⚙ Chọn loại liên kết</h2>
+<div class="services" id="services">
+<button class="service active" data-name="Tự động nhận diện">⚡ Tự động</button>
+<button class="service" data-name="GetLink">🔗 GetLink</button>
+<button class="service" data-name="Linkvertise">◈ Linkvertise</button>
+<button class="service" data-name="LootLabs">⬡ LootLabs</button>
+<button class="service" data-name="Work.ink">W Work.ink</button>
+<button class="service" data-name="Liên kết khác">＋ Khác</button>
+</div>
+<label for="url">🔗 Dán liên kết của bạn</label>
+<div class="urlbox"><input id="url" type="url" placeholder="https://example.com/duong-dan" autocomplete="url"><button class="clear" id="clear" type="button">Xóa</button></div>
+<button class="submit" id="go">⚡ GỬI YÊU CẦU</button>
+<div class="result" aria-live="polite"><div><b id="resultTitle">Sẵn sàng nhận liên kết</b><small id="resultText">Kết quả sẽ hiển thị tại đây.</small></div><button class="copy" id="copy" type="button">Sao chép</button></div>
+<p class="notice">Lưu ý: Đây là bản giao diện thử nghiệm. Chưa có API xử lý thật. Chỉ sử dụng với liên kết bạn được phép truy cập; không dùng để né thanh toán, đăng nhập hoặc các biện pháp kiểm soát truy cập.</p>
+</section>
+<section class="features"><div class="feature">🆓<b>Dễ sử dụng</b><span>Giao diện tiếng Việt rõ ràng</span></div><div class="feature">⚡<b>Thao tác nhanh</b><span>Nhập link trong một nơi</span></div><div class="feature">🔒<b>Minh bạch</b><span>Thông báo rõ trạng thái xử lý</span></div></section>
+</main>
+<footer>© 2026 LINKBYPASS PRO · Bản giao diện thử nghiệm</footer>
+<script>
+let selected='Tự động nhận diện', last='';
+document.querySelectorAll('.service').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.service').forEach(x=>x.classList.remove('active'));b.classList.add('active');selected=b.dataset.name;}));
+const url=document.getElementById('url'), title=document.getElementById('resultTitle'), text=document.getElementById('resultText');
+document.getElementById('clear').onclick=()=>{url.value='';title.textContent='Sẵn sàng nhận liên kết';text.textContent='Kết quả sẽ hiển thị tại đây.';last='';};
+document.getElementById('go').onclick=()=>{let v=url.value.trim();try{let u=new URL(v);if(!['http:','https:'].includes(u.protocol))throw 0;title.textContent='Đã kiểm tra định dạng liên kết';text.textContent='Đã chọn '+selected+'. Bản demo chưa kết nối bộ xử lý máy chủ.';last=v;}catch(e){title.textContent='Liên kết chưa hợp lệ';text.textContent='Vui lòng nhập URL bắt đầu bằng https:// hoặc http://';last='';}};
+document.getElementById('copy').onclick=async()=>{if(!last){text.textContent='Chưa có liên kết hợp lệ để sao chép.';return;}try{await navigator.clipboard.writeText(last);text.textContent='Đã sao chép liên kết đã nhập.';}catch(e){text.textContent='Trình duyệt không cho phép sao chép tự động.';}};
+</script>
+</body></html>
